@@ -1,0 +1,71 @@
+Q4.
+
+student@D001-38:~$ isqlplus
+User Name:csek2141019225
+Password:
+SQL*Plus: Release 12.2.0.1.0 Production on Fri Feb 16 17:33:51 2024
+
+Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, Oracle Label Security, OLAP, Data Mining,
+Oracle Database Vault and Real Application Testing options
+
+SQL> insert into prereq(Course_ID,Prereq_ID)
+  2  values('BIO-301','BIO-101');
+
+1 row created.
+
+Commit complete.
+SQL> insert into prereq(Course_ID,Prereq_ID)
+  2  values('BIO-399','BIO_101');
+
+1 row created.
+
+Commit complete.
+SQL> insert into prereq(Course_ID,Prereq_ID)
+  2  values('CS-190','CS-101');
+
+1 row created.
+
+Commit complete.
+SQL> insert into prereq(Course_ID,Prereq_ID)
+  2  values('CS-315','CS-101');
+
+1 row created.
+
+Commit complete.
+SQL> insert into prereq(Course_ID,Prereq_ID)
+  2  values('CS-319','CS-101');
+
+1 row created.
+
+Commit complete.
+SQL> insert into prereq(Course_ID,Prereq_ID)
+  2  values('CS-347','CS-101');
+
+1 row created.
+
+Commit complete.
+SQL> insert into prereq(Course_ID,Prereq_ID)
+  2  values('EE-181','PHY_101');
+
+1 row created.
+
+Commit complete.
+SQL> select * from Prereq;
+
+COURSE_ID  PREREQ_ID
+---------- ----------
+BIO-301    BIO-101
+BIO-399    BIO_101
+CS-190	   CS-101
+CS-315	   CS-101
+CS-319	   CS-101
+CS-347	   CS-101
+EE-181	   PHY_101
+
+7 rows selected.
+

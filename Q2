@@ -1,0 +1,129 @@
+Q2.
+
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(12121,'Wu','Finance',90000);
+
+1 row created.
+
+Commit complete.
+SQL> select * from Instructor;
+
+	ID NAME 			  DEPT_NAME		   SALARY
+---------- ------------------------------ -------------------- ----------
+     10101 Srinivasan			  Comp. Sci.		    65000
+     12121 Wu				  Finance		    90000
+
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(15151,'Mozart',Music',40000);
+ERROR:
+ORA-01756: quoted string not properly terminated
+
+
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(15151,'Mozart','Music',40000);
+
+1 row created.
+
+Commit complete.
+SQL> select * from Instructor;
+
+
+	ID NAME 			  DEPT_NAME		   SALARY
+---------- ------------------------------ -------------------- ----------
+     10101 Srinivasan			  Comp. Sci.		    65000
+     12121 Wu				  Finance		    90000
+     15151 Mozart			  Music 		    40000
+
+
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(22222,'Einstein','Physics',40000);
+
+1 row created.
+
+Commit complete.
+SQL> select * from Instructor;
+
+	ID NAME 			  DEPT_NAME		   SALARY
+---------- ------------------------------ -------------------- ----------
+     10101 Srinivasan			  Comp. Sci.		    65000
+     12121 Wu				  Finance		    90000
+     15151 Mozart			  Music 		    40000
+     22222 Einstein			  Physics		    40000
+
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(32343,'EI Said','History',60000);
+
+1 row created.
+
+Commit complete.
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(33456,'Gold','Physics',95000);
+
+1 row created.
+
+Commit complete.
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(45565,'Kartz','Comp. Sci.',75000);
+
+1 row created.
+
+Commit complete.
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(58583,'Califieri','History',62000);
+
+1 row created.
+
+Commit complete.
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(76543,'Singh','Finance',80000);
+
+1 row created.
+
+Commit complete.
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  (76766,'Crick','Biology',72000);
+(76766,'Crick','Biology',72000)
+ *
+ERROR at line 2:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(76766,'Crick','Biology',72000);
+
+1 row created.
+
+Commit complete.
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(83821,'Brandi','Comp. Sc.',92000);
+
+1 row created.
+
+Commit complete.
+SQL> insert into Instructor(ID,Name,Dept_name,salary)
+  2  values(98345,'Kim','Electric',80000);
+
+1 row created.
+
+Commit complete.
+SQL> select * from Instructor;
+
+	ID NAME 			  DEPT_NAME		   SALARY
+---------- ------------------------------ -------------------- ----------
+     10101 Srinivasan			  Comp. Sci.		    65000
+     12121 Wu				  Finance		    90000
+     15151 Mozart			  Music 		    40000
+     22222 Einstein			  Physics		    40000
+     32343 EI Said			  History		    60000
+     33456 Gold 			  Physics		    95000
+     45565 Kartz			  Comp. Sci.		    75000
+     58583 Califieri			  History		    62000
+     76543 Singh			  Finance		    80000
+     76766 Crick			  Biology		    72000
+     83821 Brandi			  Comp. Sc.		    92000
+
+	ID NAME 			  DEPT_NAME		   SALARY
+---------- ------------------------------ -------------------- ----------
+     98345 Kim				  Electric		    80000
+
+12 rows selected.

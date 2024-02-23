@@ -1,0 +1,59 @@
+Q1.
+
+SQL> create table Instructor(ID numeric(5),Name varchar2(30),Dept_name varchar2(20),salary numeric(6));
+
+Table created.
+
+SQL> create table Course(Course_ID varchar2(10),Title varchar2(30),Dept_name varchar2(20),Credits numeric(2));
+
+Table created.
+
+SQL> create table prereq(Course_ID varchar2(10),Prereq_ID varchar2(10));
+
+Table created.
+
+SQL> create table Department(Dept_name varchar2(20),Building varchar2(20));
+
+Table created.
+
+SQL> create table Teaches(ID numeric(5),Course_ID varchar2(10),Sec_ID numeric(2),Semester varchar2(10),year numeric(4));
+
+Table created.
+
+SQL> desc Teaches
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID						    NUMBER(5)
+ COURSE_ID					    VARCHAR2(10)
+ SEC_ID 					    NUMBER(2)
+ SEMESTER					    VARCHAR2(10)
+ YEAR						    NUMBER(4)
+
+SQL> desc Department
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPT_NAME					    VARCHAR2(20)
+ BUILDING					    VARCHAR2(20)
+
+SQL> desc Course
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COURSE_ID					    VARCHAR2(10)
+ TITLE						    VARCHAR2(30)
+ DEPT_NAME					    VARCHAR2(20)
+ CREDITS					    NUMBER(2)
+
+SQL> desc prereq
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COURSE_ID					    VARCHAR2(10)
+ PREREQ_ID					    VARCHAR2(10)
+
+SQL> desc Instructor
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID						    NUMBER(5)
+ NAME						    VARCHAR2(30)
+ DEPT_NAME					    VARCHAR2(20)
+ SALARY 					    NUMBER(6)
+
